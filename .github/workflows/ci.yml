@@ -12,18 +12,6 @@ name: CI
 on: push
 
 jobs:
-  build_esp32:
+  build_project:
     name: Build Project
-    uses: ./.github/workflows/build_esp32.yml
-
-  build_esp32c3:
-    name: Build Project
-    uses: ./.github/workflows/build_esp32c3.yml
-
-  build_esp32s2:
-    name: Build Project
-    uses: ./.github/workflows/build_esp32s2.yml
-
-  build_esp32s3:
-    name: Build Project
-    uses: ./.github/workflows/build_esp32s3.yml
+    uses: ./.github/workflows/build_workflow.yml
