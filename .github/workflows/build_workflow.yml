@@ -18,8 +18,8 @@ jobs:
     name: Build Project
     runs-on: ubuntu-20.04
     # container: espressif/idf:release-v4.3
-    container: espressif/idf:release-v4.4
-    # container: espressif/idf:release-v5.0
+    # container: espressif/idf:release-v4.4
+    container: espressif/idf:release-v5.0
     # container: espressif/idf:latest
     strategy:
       fail-fast: false
