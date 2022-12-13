@@ -35,7 +35,7 @@ jobs:
         env:
           IDF_TARGET: ${{ matrix.espidf_target }}
         shell: bash
-        working-directory: esp-idf_template_project_ci
+        # working-directory: ../esp-idf_template_project_ci
         run: |
           . ${IDF_PATH}/export.sh
           idf.py build
@@ -45,9 +45,9 @@ jobs:
         with:
           name: esp-idf_template_project_ci_bin_${{ matrix.espidf_target }}
           path: |
-            esp-idf_template_project_ci/build/bootloader/bootloader.bin
-            esp-idf_template_project_ci/build/partition_table/partition-table.bin
-            esp-idf_template_project_ci/build/esp-idf_template_project_ci.bin
-            esp-idf_template_project_ci/build/esp-idf_template_project_ci.elf
-            esp-idf_template_project_ci/build/flasher_args.json
+            build/bootloader/bootloader.bin
+            build/partition_table/partition-table.bin
+            build/esp-idf_template_project_ci.bin
+            build/esp-idf_template_project_ci.elf
+            build/flasher_args.json
   # -----------------------------------------------------------------------------------------------
