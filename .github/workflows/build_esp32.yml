@@ -33,6 +33,7 @@ jobs:
           cd -
           export IDF_PATH=`pwd`/esp-idf
           echo "IDF_PATH is set to $IDF_PATH"
+          ./scripts/build_project.sh esp32
 
   build_esp32_idf_v42:
     runs-on: ubuntu-latest
@@ -53,6 +54,7 @@ jobs:
           cd -
           export IDF_PATH=`pwd`/esp-idf
           echo "IDF_PATH is set to $IDF_PATH"
+          ./scripts/build_project.sh esp32
 
   build_esp32_idf_v50:
     runs-on: ubuntu-latest
@@ -73,3 +75,4 @@ jobs:
           cd -
           export IDF_PATH=`pwd`/esp-idf
           echo "IDF_PATH is set to $IDF_PATH"
+          ./scripts/build_project.sh esp32
