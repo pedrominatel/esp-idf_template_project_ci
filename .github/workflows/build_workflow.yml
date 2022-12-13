@@ -43,10 +43,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: esp-idf_template_project_ci_bin_${{ matrix.espidf_target }}
-          path: |
-            build/bootloader/bootloader.bin
-            build/partition_table/partition-table.bin
-            build/esp-idf_template_project_ci.bin
-            build/esp-idf_template_project_ci.elf
-            build/flasher_args.json
+          path: build/esp-idf_template_project_ci.bin
+          if-no-files-found: error
   # -----------------------------------------------------------------------------------------------
