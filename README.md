@@ -8,6 +8,23 @@ This is a template project to be used as a reference for ESP-IDF projects with G
 
 Template project for ESP-IDF with GitHub CI
 
+## Important Files in this Project
+
+### CI Files
+
+* workflows/build_workflow.yml
+* workflows/ci.yml
+
+### Project Files
+
+* sdkconfig.defaults
+* sdkconfig.defaults.esp32
+* sdkconfig.defaults.esp32c3
+* sdkconfig.defaults.esp32s2
+* sdkconfig.defaults.esp32s3
+* main/idf_component.yml
+* main/Kconfig.projbuild
+
 ## Get ESP-IDF
 
 Get the ESP-IDF and install it.
@@ -18,7 +35,7 @@ See the [ESP-IDF Getting Started Guide](https://docs.espressif.com/projects/esp-
 
 Go to the project directory and build.
 
-Set the IDF_TARGET (For ESP32-S3 target, IDF version `release/v4.4` is needed)
+Set the IDF_TARGET (For ESP32-S3 target, IDF version `release/v5.0` is needed)
 
 ```
 idf.py set-target esp32s3
@@ -51,4 +68,4 @@ idf.py --port /dev/ttyUSB0 flash monitor
 
 ## License
 
-These examples are covered under Apache License Version 2.0.
+This project template is covered under Apache License Version 2.0.

@@ -59,6 +59,7 @@ flake8_output.txt
 # ESP-IDF default build directory name
 build
 sdkconfig
+sdkconfig.old
 
 # lock files for examples and components
 dependencies.lock
@@ -68,3 +69,9 @@ managed_components
 
 # pytest log
 pytest_embedded_log/
+
+# Certificates
+*.pem
+*.crt
+*.cer
+*.key
