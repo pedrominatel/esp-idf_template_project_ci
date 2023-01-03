@@ -15,4 +15,3 @@ jobs:
   build_project:
     name: Build Project
     uses: ./.github/workflows/espressif_ci.yml
-    # uses: ./.github/workflows/build_workflow.yml

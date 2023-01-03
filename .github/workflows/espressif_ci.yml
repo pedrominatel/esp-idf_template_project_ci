@@ -34,7 +34,7 @@ jobs:
     - name: Upload files to artifacts for run-target job
       uses: actions/upload-artifact@v3
       with:
-        name: ${{ matrix.espidf_target }}
+        name: target_${{ matrix.espidf_target }}
         path: |
           build/bootloader/bootloader.bin
           build/partition_table/partition-table.bin
