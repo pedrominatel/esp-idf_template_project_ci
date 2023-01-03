@@ -1,6 +1,6 @@
 menu "My Project Configuration"
 
-    config BLINK_GPIO
+    config RGB_LED_GPIO
         int "Blink GPIO number"
         default 8 if IDF_TARGET_ESP32C3 || IDF_TARGET_ESP32H4 || IDF_TARGET_ESP32C2 || IDF_TARGET_ESP32C6
         default 18 if IDF_TARGET_ESP32S2

@@ -12,18 +12,35 @@ Template project for ESP-IDF with GitHub CI
 
 ### CI Files
 
+The CI files describe the workflow to be executed on GitHub Actions.
+
 * workflows/build_workflow.yml
 * workflows/ci.yml
 
 ### Project Files
 
+Those files define specific SDK configurations depending on the selected target or general configuration for all the targets.
+
+Common for all the targets:
+
 * sdkconfig.defaults
+
+Target specific:
+
 * sdkconfig.defaults.esp32
 * sdkconfig.defaults.esp32c3
 * sdkconfig.defaults.esp32s2
 * sdkconfig.defaults.esp32s3
+
+The `idf_component.yml` file adds the components from [ESP Registry](https://components.espressif.com/).
+
 * main/idf_component.yml
+
+The `Kconfig.projbuild` define the `menuconfig` entries.
+
 * main/Kconfig.projbuild
+
+To edit the configuration by using the graphical menu, you can use `idf.py menuconfig` command.
 
 ## Get ESP-IDF
 
@@ -64,6 +81,14 @@ Use `Ctrl+]` to exit.
 The previous two commands can be combined:
 ```
 idf.py --port /dev/ttyUSB0 flash monitor
+```
+
+### Creating a New Project from Scratch
+
+To create a new blank project, you can use `idf.py` to generate all the necessary files.
+
+```
+idf.py create-project <my_project_name>
 ```
 
 ## License
