@@ -27,7 +27,7 @@ jobs:
         espidf_target: ["esp32", "esp32c3", "esp32s2", "esp32s3"]  # <--- Specify a list of Espressif chips
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
         with:
           submodules: 'true'
       - name: Build Application with ESP-IDF
