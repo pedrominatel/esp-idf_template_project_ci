@@ -17,7 +17,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    strategy:
+          fail-fast: false
+          matrix:
+            espidf_target: ["esp32", "esp32c3", "esp32s2", "esp32s3"]  # <--- Specify a list of Espressif chips
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
@@ -27,4 +30,15 @@ jobs:
       uses: espressif/esp-idf-ci-action@v1
       with:
         esp_idf_version: v5.0
-        target: esp32
+        target: ${{ matrix.espidf_target }}
+    - name: Upload files to artifacts for run-target job
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ matrix.espidf_target }}
+        path: |
+          build/bootloader/bootloader.bin
+          build/partition_table/partition-table.bin
+          build/esp-idf_template_project_ci.bin
+          build/esp-idf_template_project_ci.elf
+          build/flasher_args.json
+        if-no-files-found: error
