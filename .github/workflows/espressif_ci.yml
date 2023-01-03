@@ -7,6 +7,12 @@
 #
 # This file contains the workflows that are run periodically to build the examples.
 
+name: build_project_esp
+
+on:
+  workflow_call: {}
+  workflow_dispatch: {}
+
 jobs:
   build:
 
