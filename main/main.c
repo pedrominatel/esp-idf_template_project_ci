@@ -9,6 +9,7 @@
 #include "freertos/task.h"
 #include "esp_log.h"
 #include "led_strip.h"
+#include "my_component.h"
 
 static const char *TAG = "main";
 
@@ -38,6 +39,8 @@ void app_main(void)
             led_strip_set_pixel(led_strip, 0, 16, 16, 16);
             /* Refresh the strip to send data */
             led_strip_refresh(led_strip);
+            // Call blink counter component
+            my_component_blink_counter();
         } else {
             /* Set all LED off to clear all pixels */
             led_strip_clear(led_strip);
